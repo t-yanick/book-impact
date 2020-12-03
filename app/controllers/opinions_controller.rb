@@ -1,10 +1,12 @@
 class OpinionsController < ApplicationController
   before_action :set_opinion, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /opinions
   # GET /opinions.json
   def index
-    @opinions = Opinion.all
+    @opinion = Opinion.new
+    @opinions = Opinion.all.order('created_at DESC')
   end
 
   # GET /opinions/1
@@ -14,7 +16,7 @@ class OpinionsController < ApplicationController
 
   # GET /opinions/new
   def new
-    @opinion = Opinion.new
+    @opinion = current_user.opinions.build
   end
 
   # GET /opinions/1/edit
@@ -24,7 +26,7 @@ class OpinionsController < ApplicationController
   # POST /opinions
   # POST /opinions.json
   def create
-    @opinion = Opinion.new(opinion_params)
+    @opinion = current_user.opinions.build(opinion_params)
 
     respond_to do |format|
       if @opinion.save
