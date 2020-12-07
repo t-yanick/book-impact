@@ -39,7 +39,7 @@
         <div class = "navbar-end">
           <div class = "field is-grouped">
            <p class = "control">
-            <%= link_to 'New Book Review', root_path, class: "button is-info is-inverted"%>
+            <%= link_to 'New Book Review', root_path, class: "button review-button is-info is-inverted"%>
             </p>
             <p class = "control">
             <%= signed_in? %>
@@ -48,8 +48,9 @@
         </div>
       </div>
     </nav>
-
-
+    <div class = "container">    
     <%= yield %>
+    <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
