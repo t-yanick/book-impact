@@ -27,13 +27,13 @@
         <div class="level-item has-centered-text">
             <div>
                 <p class="heading">Following</p>
-                <p class="title is-6">123</p>
+                <%= current_user.followers.count %>
             </div>
         </div>
             <div class="level-item has-centered-text">
             <div>
                 <p class="heading">Followers</p>
-                <p class="title is-6">465K</p>
+                <%= current_user.followds.count %>
             </div>
         </div>
     </div>
