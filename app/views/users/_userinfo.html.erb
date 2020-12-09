@@ -1,0 +1,44 @@
+<div class='container'>
+  <div class="col-12 align-content-center pt-4">
+   
+  </div>
+
+  <div class=" justify-content-center " style=" text-align: center">
+    <h5 class="card-title"><%= @user.name %></h5>
+    <p class="card-text"><small class="text-muted"><%= "@#{@user.username}" %></small></p>
+    <%= follow_unfollow(@user)%>
+    <%= link_to 'Unfollow'%>
+    <div class='d-flex row justify-content-center'>
+      <div>
+        <h3><%= @user.opinions.count.to_s%></h3>
+        <h4>Reviews</h4>
+      </div>
+      <div>
+        <h3><%= @user.followers.count.to_s %></h3>
+        <h4>Followers</h4>
+      </div>
+      <div>
+        <h3><%= @user.followeds.count.to_s %></h3>
+        <h4>Followed</h4>
+      </div>
+    </div>
+    <div>
+      <div class="media-body">
+        <div class="row justify-content-center ">
+          <h6>Followed By</h6>
+        </div>
+        <hr/>
+      </div>
+      <div>
+      <% @user.follows.each do |person| %>
+        <div class="col-12">
+          <%= user_avatar(person) %>
+          <%= link_to person.name, user_path(person.id)  %>
+          <%= follow_unfollow(@user)%>
+        </div>
+        <hr>
+      <% end %>
+    </div>
+    </div>
+  </div>
+</div>

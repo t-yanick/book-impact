@@ -14,8 +14,18 @@
  *= require_self
  */
 
- @import 'bulma';
+//  @import 'bulma';
+ @import "bootstrap";
+//  @import '@fortawesome/fontawesome-free/scss/fontawesome';
+//  @import '@fortawesome/fontawesome-free/scss/solid';
+//  @import '@fortawesome/fontawesome-free/scss/regular';
+//  @import '@fortawesome/fontawesome-free/scss/brands';
+//  @import '@fortawesome/fontawesome-free/scss/v4-shims';
 
+ .navbar {
+   padding-left: 10%;
+ }
+ 
  .navbar-brand .title {
     color: white
 }
