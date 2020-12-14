@@ -17,6 +17,7 @@ validates :username, presence: true, allow_blank: false,
   has_many :followds, through: :followeds, source: :follower
   has_rich_text :body
   has_one_attached :photo
+  has_one_attached :cover_image
   scope :ordered_users, -> { order(created_at: :desc) }
   scope :user_and_following, ->(ids) { where(id: ids) }
   scope :user_who_follow, ->(ids) { where.not(id: ids) }

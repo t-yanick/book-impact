@@ -1,46 +1,30 @@
-<section class="user-section mx-2">
-  <h2><%= "Name: #{@user.name}" %></h2>
-
-  <article class="timeline">
-    <h3>Recent reviews</h3>
-    <ul class="opinions">
-    <% @opinions.each do | opinion | %>
-        <div class = "box">
-            <article class = "media">
-                <div class = "media-left">
-                    <figure class = "image is-64x64">
-                    <%= gravatar_image_tag(opinion.user.email, size: 64, alt: opinion.user.name) %>
-                    </figure>
-                </div>
-                    <div class = "media-content">
-                        <div class = "content">
-                            <strong><%= opinion.user.name %></strong><br/>
-                            <small><%= opinion.user.username %></small><br/>
-                            <p><%= opinion.feedback %></p>
-                        </div>
-                        <% if user_signed_in? && current_user.id == opinion.user_id %>
-                        <nav class = "level">
-                            <div class = "level-left is-mobile">
-                                <%= link_to opinion, class: "level-item" do %>
-                                    <span class = "icon"><i class = "fa fa-link" aria-hidden = "true"></i></span>
-                                <% end %>
-                                <%= link_to edit_opinion_path(opinion), class: "level-item" do %>
-                                    <span class = "icon"><i class = "fa fa-pencil" aria-hidden = "true"></i></span>
-                                <% end %>
-                                <%= link_to opinion, method: :delete, data: {confirm: "Are you sure you want to delete this review?" } do %>
-                                    <span class = "icon"><i class = "fa fa-trash-o" aria-hidden = "true"></i></span>
-                                <% end %>
-                            </div>
-                        </nav>
-                        <% end %>                
-                    </div>
-            </article>
+<section class='container-fluid p-0'>
+  <div class='row m-0'>
+    <div class='col-2 user-profile bg-secondary p-0 m-0'>
+      <%= render 'opinions/user-profile' %>
+    </div>
+    <div class='col-10 p-0 m-0'>
+      <%= flash_message %>
+      <%= render 'problems/navbar' %>
+      <div class='row m-0 user-info'>
+        <div class="col-9 user-interac">
+          <div>
+            <%= user_cover %>
+          </div>
+          <div>
+            <%= render 'user_navbar'%>
+          </div>
+          <div class='user-form shadow-lg p-3 mb-5 bg-white rounded mt-2'>
+            <%= render 'form' %>
+          </div>
+          <div class='myfeed-c'>
+            <%= render 'myfeed' %>
+          </div>
         </div>
-    <% end %>
-   
-  </article>
+        <div class="col-3 user-interac">
+          <%= render 'userdata'%>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
-<div class="col-3">
-<%= render 'userinfo'%>
-</div>
