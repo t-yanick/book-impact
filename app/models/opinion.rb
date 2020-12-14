@@ -3,7 +3,9 @@ class Opinion < ApplicationRecord
                                                 too_long: '1000 characters in post is the maximum allowed.' }
 
   belongs_to :user
-  scope :ordered_by_most_recent, -> { order(created_at: :desc) }
+  has_rich_text :body
+  scope :ordered_opinion, -> { order(created_at: :desc).includes(:user) }
+  scope :user_filter_opinion, ->(user) { where(user: user) }
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
 end

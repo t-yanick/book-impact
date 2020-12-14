@@ -5,8 +5,9 @@ class OpinionsController < ApplicationController
   # GET /opinions
   # GET /opinions.json
   def index
+    @opinions = current_user.followeds_opinions
     @opinion = Opinion.new
-    @opinions = Opinion.all.order('created_at DESC')
+    @users_first_three = current_user.who_follow.last(3)
   end
 
   # GET /opinions/1
@@ -56,10 +57,16 @@ class OpinionsController < ApplicationController
   # DELETE /opinions/1
   # DELETE /opinions/1.json
   def destroy
-    @opinion.destroy
-    respond_to do |format|
-      format.html { redirect_to opinions_url, notice: 'Review was successfully destroyed.' }
-      format.json { head :no_content }
+    @opinion = Opinion.find(params[:id])
+    if @opinion
+      @opinion.destroy
+      respond_to do |format|
+        format.html { redirect_to opinions_url, notice: 'Review was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      format.html { render @opinion }
+      format.json { render json: @opinion.errors, status: :unprocessable_entity }
     end
   end
 
@@ -71,6 +78,6 @@ class OpinionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def opinion_params
-      params.require(:opinion).permit(:feedback)
+      params.require(:opinion).permit(:user, :feedback, :user_id, :body)
     end
 end
