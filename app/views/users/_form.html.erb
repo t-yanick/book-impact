@@ -3,7 +3,7 @@
       <div class='d-flex align-items-center title-fp'>
       </div>
       <div class='editor-area'>
-        <%= form.rich_text_area :body, label: "What's Your Problem", input_html: {class: "textarea"}, wrapper: false, label_html: {class: "label"}, placeholders: "Your Problem...", autofocus: true %>
+        <%= form.rich_text_area :body, label: "What is your review feedback?", input_html: {class: "textarea"}, wrapper: false, label_html: {class: "label"}, placeholders: "Your review...", autofocus: true %>
       </div>
   
       <%= hidden_field_tag(:redirect_url, user_path(@user.id)) %>
