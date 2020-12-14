@@ -21,7 +21,7 @@ module UsersHelper
     if @user.cover_image.attached?
       image_tag @user.cover_image, class: 'col-12 p-0', style: 'height: 30rem'
     else
-      image_tag('cover.jpg', class: 'col-12 p-0', style: 'height: 30rem')
+      image_tag('cover.png', class: 'col-12 p-0', style: 'height: 30rem')
     end
   end
 
