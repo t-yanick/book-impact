@@ -49,27 +49,31 @@
 /* footer */
 
 footer {
-    // margin-top: 25px;
-    // padding-top: 1px;
-    // border-top: 1px solid #eaeaea;
-    // color: #999;
+    margin-bottom: 50px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-top: 1px solid #eaeaea;
+    color: #999;
+    justify-content: center;
+    margin-left: 20rem;
   }
   
-//   footer a {
-//     color: #555;
-//   }
+footer a {
+  color: #555;
+}
   
-//   footer a:hover {
-//     color: #222;
-//   }
+  footer a:hover {
+    color:blue;
+  }
   
   footer small {
     float: left;
   }
   
   footer ul {
-    float: right;
+    // float: right;
     list-style: none;
+    align-items: center;
   }
   
   footer ul li {

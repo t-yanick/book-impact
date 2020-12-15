@@ -1,21 +1,19 @@
-<div class="section">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-half">
-        <h1 class="title">Editing a Review</h1>
+<section class='container-fluid p-0 m-0'>
+  <div class='row m-0'>
+    <div class='col-2 user-profile p-0 m-0'>
+      <%= render 'user-profile' %>
+    </div>
+    <div class='col-10 p-0 m-0'>
+      <%= flash_message %>
+      <%= render 'opinions/navbar' %>
+      <div class='col-7 container mt-5 shadow-lg p-3 mb-5 bg-white rounded editing-p'>
+        <h1>Editing a Review</h1>
+
         <%= render 'form', opinion: @opinion %>
+        <div class='text-center'> 
+          <%= link_to 'Cancel', opinions_path, class:'btn bg-left text-light ml-3' %>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-<nav class="navbar is-fixed-bottom">
-  <div class="navbar-menu">
-    <div class="navbar-item">
-      <div class="field is-grouped">
-        <p class="control">
-          <%= link_to 'Cancel', opinions_path, class: "button is-dark" %>
-        </p>
-      </div>
-    </div>
-</nav>
+</section>

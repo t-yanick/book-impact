@@ -15,12 +15,12 @@ class FollowingsController < ApplicationController
 
 	def destroy
 		@user = User.find(params[:id]
-		if @user)
+		@user.exists?
 			current_user.unfollow(@user)
 			flash[:notice] = "Unfolow #{@user.username}"
-		else
-			flash[:notice] 'Something went wrong, try again'
-		end
+		# else
+			# flash[:notice] 'Something went wrong, try again'
+		# end
 		redirect_to :back
 	end
 
