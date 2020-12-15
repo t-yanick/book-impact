@@ -16,9 +16,9 @@ class OpinionsController < ApplicationController
   end
 
   # GET /opinions/new
-  def new
-    @opinion = current_user.opinions.build
-  end
+  # def new
+  #   @opinion = current_user.opinions.build
+  # end
 
   # GET /opinions/1/edit
   def edit
@@ -31,7 +31,7 @@ class OpinionsController < ApplicationController
 
     respond_to do |format|
       if @opinion.save
-        format.html { redirect_to @opinion, notice: 'Review was successfully created.' }
+        format.html { redirect_to opinions_path, notice: 'Review was successfully created.' }
         format.json { render :show, status: :created, location: @opinion }
       else
         format.html { render :new }

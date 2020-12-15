@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @users = User.all.order('created_at DESC')
   end
@@ -8,6 +8,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @new_opinion = Opinion.new
+    @opinions = @user.opinions
+
     @users = @user.followds
     @users2 = @user.follows
 
