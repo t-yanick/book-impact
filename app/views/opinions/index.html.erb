@@ -1,13 +1,16 @@
-<section class = "section">
-  <div class = "container">
-    <div class = "columns">
-    <% if user_signed_in?  %>
-      <%= render 'sidenav'%>
-    <% else %>
-      <%= render 'trends'%>  
-    <% end %>
-    <%= render 'feed'%>
-    <%= render 'who-to-follow'%>
+<section class = 'container-fluid p-0 m-0'>
+  <div class = 'row m-0'>
+    <div class = 'col-2 user-profile p-0 m-0'>
+      <%= render 'user-profile'%>
+    </div>
+    <div class = 'col-10 m-0 p-0'>
+      <%= flash_message %>
+      <%= render 'navbar' %>
+      <div class = 'row m-0'>
+        <div class = 'col-8 mt-5'>
+          <%= render 'feed' %>
+        </div>
+      </div>
     </div>
   </div>
 </section>

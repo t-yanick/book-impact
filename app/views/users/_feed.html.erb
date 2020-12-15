@@ -1,11 +1,11 @@
 <% @user.opinions.order("created_at DESC").each do |opinion| %>
-    <div class="container border py-4 my-2 mx-auto d-flex col-8 problems">
+    <div class="container border py-4 my-2 mx-auto d-flex col-8 opinions">
       
       <div class="col-4 userimg d-flex justify-content-center align-items-center">
         <%= user_avatar(opinion.user) %>
       </div>
   
-      <div class="col-8 problems-content">
+      <div class="col-8 opinions-content">
         <div class='d-flex justify-content-between align-items-center'>
           <div>
             <strong><%= opinion.user.name %></strong><br/>
