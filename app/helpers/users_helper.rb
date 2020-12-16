@@ -13,7 +13,7 @@ module UsersHelper
     if user.photo.attached?
       image_tag user.photo.variant(resize: '90x90!'), class: 'rounded-circle avatar'
     else
-      image_tag('avatar.png', class: 'rounded-circle', height: 130, width: 130)
+      image_tag('yan-profile.jpg', class: 'rounded-circle', height: 110, width: 110)
     end
   end
 

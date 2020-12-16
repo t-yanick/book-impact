@@ -34,7 +34,7 @@ gem 'font-awesome-rails'
 gem 'hirb'
 gem 'gravatar_image_tag', '~> 1.2'
 gem 'simple_form'
-gem 'font-awesome-sass', '~> 4.4.0'
+gem 'trix'
 
 gem 'image_processing', '~> 1.2'
 
