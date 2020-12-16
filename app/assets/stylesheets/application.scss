@@ -21,29 +21,312 @@
 //  @import '@fortawesome/fontawesome-free/scss/regular';
 //  @import '@fortawesome/fontawesome-free/scss/brands';
 //  @import '@fortawesome/fontawesome-free/scss/v4-shims';
+ @import 'users';
+ @import 'opinions';
+
+ @font-face {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, serif;
+  overflow-x: hidden;
+  background-color: #e7e9ec !important;
+}
+
+body a,
+html a {
+  color: #999;
+  text-decoration: none;
+  font-weight: bold;
+}
 
  .navbar {
    padding-left: 10%;
  }
  
  .navbar-brand .title {
-    color: white
+    color: red;
 }
 
-// Round images
-.image {
-    border-radius: 50%;
-    img {
-        border-radius: 50%;
+// nav {
+//   span {
+//     h1 {
+//       margin: 0 auto;
+//     }
+//   }
+// }
+
+.flash {
+  font-size: 1.7rem;
+}
+.bg-left {
+  background-color: #1c3e4a;
+}
+
+.bg-navbar {
+  background-color: #529ff7;
+}
+
+.logo-navbar {
+  font-size: 2rem;
+}
+
+.logs {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.sign-up {
+  h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+    color:  #ada851;
+    text-align: center;
+    border-top: 1px solid  #5156ad;
+    border-bottom: 1px solid  #5156ad;
+    width: fit-content;
+    margin: 1rem auto;
+    padding-bottom: 1rem;
+  }
+  label {
+    font-size: 1.75rem;
+    line-height: 1.5;
+    font-weight: bold;
+  }
+  #user_cover_image,
+  #user_avatar {
+    font-size: 1rem;
+    margin: 0 1rem;
+  }
+  #user_name {
+    margin-left: 5rem;
+  }
+  #user_username {
+    margin-left: 1.2rem;
+  }
+  #user_email {
+    margin-left: 5rem;
+  }
+  #user_photo {
+    margin-left: 6.6rem;
+  }
+  #user_password {
+    margin-left: 1.2rem;
+  }
+  small {
+    font-size: 1.2rem;
+  }
+  .form-actions {
+    text-align: center;
+    margin: 1rem 0;
+    input {
+      font-size: 1.6rem;
+      font-weight: bolder;
     }
+  }
+  .links-log {
+    text-align: center;
+    margin-top: 1rem;
+    a {
+      font-size: 1.6rem;
+      color: #5156ad;
+    }
+  }
 }
 
-.notification:not(:last-child){
-    margin-bottom: 0;
+.home-menu {
+  height: 100%;
+  .user-profile {
+    .user-photo {
+      margin: 1rem 1rem;
+    }
+  }
+  .user-name {
+    h1 {
+      font-size: 1rem;
+      width: 8rem;
+      margin-right: 1.5rem;
+      margin-left: -1rem;
+    }
+  }
+  .followings {
+    border-bottom: grey solid 1px;
+    border-top:  grey solid 1px;
+    padding: 1rem 0;
+    h3 {
+      font-size: 1rem;
+    }
+  }
+  .home-page {
+    border-bottom: grey solid 2px;
+    padding: 1rem 0;
+    .h-items {
+      margin-left: 1rem;
+      span {
+        font-size: 1rem;
+        margin-right: 5px;
+      }
+      h3 {
+        font-weight: 400;
+      }
+    }
+    .h-items:hover {
+      text-decoration: none;
+    }
+  }
+  .home-page:hover {
+    background-color: #529ff7;
+  }
 }
 
-.review-button {
-    margin-top: 0.5rem;
+.left-side {
+  height: 100vh
+}
+
+.register {
+  margin-top: 1.7rem;
+  .login-form {
+    height: 20rem;
+    border: 1px solid #000;
+    border-radius: 1rem;
+    .formate {
+      height: 22rem;
+      margin-top: 2rem;
+      width: 40rem;
+      h2 {
+        font-size: 3rem;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 400;
+      }
+      #user_email {
+        margin-left: 4rem;
+        width: 15rem;
+      }
+      #user_password {
+        margin-left: 2rem;
+        width: 15rem;
+      }
+      .rememberme {
+        font-size: 1rem;
+        .form-check {
+          display: flex;
+          input {
+            margin-left: 5rem;
+            margin-top: 0.6rem;
+          }
+        }
+      }
+      .button {
+        margin-bottom: 1rem;
+        .login-button {
+          font-size: 1rem;
+        }
+      }
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+  .image-login {
+    height: 25rem;
+    border-radius: 25%;
+  }
+}
+
+.home-menu {
+  .title-log {
+    h2, h4 {
+      color: #1c3e4a;
+    }
+    h2 {
+      font-size: 2.5rem;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bolder;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+  }
+}
+
+.avatar {
+  height: 13rem;
+  width: 13rem;
+}
+
+.form-inputs {
+  #user_name {
+    width: 30rem;
+    margin-left: 4rem;
+  }
+  #user_email {
+    width: 30rem;
+    margin-left: 4rem;
+  }
+}
+
+.input {
+  #user_password {
+    width: 15rem;
+    margin-left: 9.5rem;
+  }
+  #user_password_confirmation {
+    width: 15rem;
+    margin-left: 2rem;
+  }
+  #user_current_password {
+    width: 15rem;
+    margin-left: 5rem;
+  }
+}
+
+.back {
+  background-color: #1c3e4a;
+  color: white;
+  font-size: 1rem;
+}
+
+.edit {
+  height: auto;
+  .title-edit {
+    color: #529ff7;
+    font-weight: 900;
+    font-size: 2rem;
+  }
+  label {
+    font-size: 1.3rem;
+  }
+  input {
+    font-size: 1.1rem;
+  }
+  small {
+    font-size: 1rem;
+  }
+  .update {
+    background-color: #529ff7;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.3rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+  .label-pics {
+    font-weight: bolder;
+    color: #529ff7;
+  }
+}
+
+.alert,
+.invalid-feedback {
+  font-size: 1.2rem;
 }
 
 /* footer */
