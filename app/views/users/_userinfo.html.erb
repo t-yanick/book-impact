@@ -38,14 +38,15 @@
       <hr/>
     </div>
     
-    <% @user.follows.each do |person| %>
+    <h4>Followed by @<%=current_user.username%></h4> 
+    <% current_user.followds.each do |person| %>
       <div class="col-11 users-followeds">
         <div class='row d-flex'>
           <div class='col-4 mr-3'>
             <%= user_avatar(person) %>
           </div>
           <div class='col-7 d-flex justify-content-center align-items-center'>
-            <%= link_to person.fullname, user_path(person.id)  %>
+            <%= link_to person.name, user_path(person.id)  %>
           </div>
         </div>
       </div>

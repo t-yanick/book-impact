@@ -10,18 +10,18 @@ class FollowingsController < ApplicationController
 		else
 			flash[:alert] = "Error to follow #{@user.username}"
 		end
-		redirect_to :back
+		redirect_to @user
 	end
 
 	def destroy
-		@user = User.find(params[:id]
-		@user.exists?
+		@user = User.find(params[:id])
+		if @user.present?
 			current_user.unfollow(@user)
 			flash[:notice] = "Unfolow #{@user.username}"
-		# else
-			# flash[:notice] 'Something went wrong, try again'
-		# end
-		redirect_to :back
+		else
+			flash[:notice] = 'Something went wrong, try again'
+		end
+		redirect_to @user
 	end
 
 	private

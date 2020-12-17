@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show] 
   resources :followings, only: %[destroy]
 
-  get 'following/:id', to: 'followinngs#create', as: 'follow'
+  get 'following/:id', to: 'followings#create', as: 'follow'
   resources :opinions do
     resources :comments, only: %i[create]
     resources :likes, only: %i[create destroy]
