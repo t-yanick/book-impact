@@ -1,3 +1,5 @@
+# rubocop: disable Layout/LineLength
+
 module UsersHelper
   def follow_unfollow(user)
     links = link_to 'Unfollow', following_path, method: :delete, class: 'textdec-none form-btn unfollow-btn align-self-center'
@@ -51,7 +53,8 @@ module UsersHelper
 
   def comment_settings(opinion)
     return unless user_signed_in? && current_user.id == opinion.user_id
-      content_tag :div, class: 'd-flex justify-content-between'
+
+    content_tag :div, class: 'd-flex justify-content-between'
       "#{link_to edit_opinion_path(id: opinion.id), class: 'text-dark mx-2 icon-comment' do
            fa_icon 'edit'
          end}" \
@@ -60,3 +63,5 @@ module UsersHelper
          end}".html_safe
   end
 end
+
+# rubocop: enable Layout/LineLength
