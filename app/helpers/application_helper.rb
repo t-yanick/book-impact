@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
   def flash_message
     if flash[:notice]
-      content_tag :p, notice, :class => 'bg-success m-0 text-white text-center p-2'
+      content_tag :p, notice, class: 'bg-success m-0 text-white text-center p-2'
     elsif flash[:alert]
-      content_tag :p, alert, :class => 'bg-danger m-0 text-white text-center p-2'
+      content_tag :p, alert, class: 'bg-danger m-0 text-white text-center p-2'
     end
   end
 
@@ -31,4 +33,3 @@ module ApplicationHelper
     end
   end
 end
-

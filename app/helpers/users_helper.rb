@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 module UsersHelper
-	def follow_unfollow(user)
+  def follow_unfollow(user)
     links = link_to 'Unfollow', following_path, method: :delete, class: 'textdec-none form-btn unfollow-btn align-self-center'
     return links if current_user.followds.include?(user)
 
@@ -7,9 +9,9 @@ module UsersHelper
     return cntnt unless current_user.followds.include?(user) || current_user == user
 
     nil
-	end
-	
-	def user_avatar(user)
+  end
+
+  def user_avatar(user)
     if user.photo.attached?
       image_tag user.photo.variant(resize: '90x90!'), class: 'rounded-circle avatar'
     else

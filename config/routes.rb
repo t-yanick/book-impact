@@ -1,15 +1,16 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
- 
   root 'opinions#index'
   # root 'devise/sessions#new'
 
-  devise_for :users, controllers: { registrations: "users/registrations" }
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   # devise_scope :user do
   #   root to: 'devise/sessions#new'
   # end
 
-  resources :users, only: [:index, :show] 
-  resources :followings, only: %[destroy]
+  resources :users, only: %i[index show]
+  resources :followings, only: %(destroy)
 
   get 'following/:id', to: 'followings#create', as: 'follow'
   resources :opinions do

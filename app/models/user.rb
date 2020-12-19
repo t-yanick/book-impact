@@ -1,13 +1,15 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-validates :username, presence: true, allow_blank: false,
-                      uniqueness: { case_sensitive: false },
-                      length: { in: 5..20 },
-                      format: { without: /\s/, message: 'no spaces allowed' }      
+  validates :username, presence: true, allow_blank: false,
+                       uniqueness: { case_sensitive: false },
+                       length: { in: 5..20 },
+                       format: { without: /\s/, message: 'no spaces allowed' }
   has_many :opinions, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
@@ -37,5 +39,4 @@ validates :username, presence: true, allow_blank: false,
   def unfollow(user)
     followds.destroy(user)
   end
-
 end

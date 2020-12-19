@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.feature "Users", type: :feature do
+RSpec.feature 'Users', type: :feature do
   before :each do
     @user1 = User.create(name: 'ngwa', username: '@ngwa', email: 'ngwa@test.com', password: '123456', id: 1)
     @user2 = User.create(name: 'tebong', username: '@tebong', email: 'tebong@test.com', password: '123456', id: 2)

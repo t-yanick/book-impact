@@ -1,7 +1,9 @@
-class Comment < ApplicationRecord
-	validates :content, presence: true, length: { maximum: 200,
-																								too_long: 'A comment can have a maximum of 200 characters.' }
+# frozen_string_literal: true
 
-belongs_to :user
-belongs_to :opinion
+class Comment < ApplicationRecord
+  validates :content, presence: true, length: { maximum: 200,
+                                                too_long: 'A comment can have a maximum of 200 characters.' }
+
+  belongs_to :user
+  belongs_to :opinion
 end

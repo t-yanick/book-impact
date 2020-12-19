@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class CommentsController < ApplicationController
-	def create
+  def create
     @comment = Comment.new(comment_params)
     @comment.opinion_id = params[:opinion_id]
     @comment.user = current_user
