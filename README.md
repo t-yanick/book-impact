@@ -27,7 +27,7 @@ In this line, book review social media website is a platform for users to post r
 
 ## Live Demo
 
-[Project live website](https://evening-mountain-82652.herokuapp.com/)
+[Project live website](https://hidden-forest-65128.herokuapp.com/)
 
 ## 🛠 Getting Started
 
