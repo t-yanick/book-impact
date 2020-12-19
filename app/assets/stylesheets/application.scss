@@ -73,6 +73,60 @@ html a {
   font-weight: bold;
 }
 
+footer small {
+  float: left;
+}
+
+.edit {
+  height: auto;
+
+  .title-edit {
+    color: #529ff7;
+    font-weight: 900;
+    font-size: 2rem;
+  }
+
+  label {
+    font-size: 1.3rem;
+  }
+
+  input {
+    font-size: 1.1rem;
+  }
+
+  small {
+    font-size: 1rem;
+  }
+
+  .update {
+    background-color: #529ff7;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  .label-pics {
+    font-weight: bolder;
+    color: #529ff7;
+  }
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: blue;
+}
+
 .sign-up {
   h2 {
     font-size: 2rem;
@@ -81,7 +135,6 @@ html a {
     text-align: center;
     border-top: 1px solid  #5156ad;
     border-bottom: 1px solid  #5156ad;
-    width: fit-content;
     margin: 1rem auto;
     padding-bottom: 1rem;
   }
@@ -146,6 +199,23 @@ html a {
 .home-menu {
   height: 100%;
 
+  .title-log {
+    h2,
+    h4 {
+      color: #1c3e4a;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bolder;
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+  }
+
   .user-profile {
     .user-photo {
       margin: 1rem 1rem;
@@ -200,6 +270,35 @@ html a {
 
 .left-side {
   height: 100vh;
+}
+
+.form-inputs {
+  #user_name {
+    width: 30rem;
+    margin-left: 4rem;
+  }
+
+  #user_email {
+    width: 30rem;
+    margin-left: 4rem;
+  }
+}
+
+.input {
+  #user_password {
+    width: 15rem;
+    margin-left: 9.5rem;
+  }
+
+  #user_password_confirmation {
+    width: 15rem;
+    margin-left: 2rem;
+  }
+
+  #user_current_password {
+    width: 15rem;
+    margin-left: 5rem;
+  }
 }
 
 .register {
@@ -264,105 +363,15 @@ html a {
   }
 }
 
-.home-menu {
-  .title-log {
-    h2,
-    h4 {
-      color: #1c3e4a;
-    }
-
-    h2 {
-      font-size: 2.5rem;
-      font-family: 'Courier New', Courier, monospace;
-      font-weight: bolder;
-    }
-
-    h4 {
-      font-size: 1rem;
-    }
-  }
-}
-
 .avatar {
   height: 13rem;
   width: 13rem;
-}
-
-.form-inputs {
-  #user_name {
-    width: 30rem;
-    margin-left: 4rem;
-  }
-
-  #user_email {
-    width: 30rem;
-    margin-left: 4rem;
-  }
-}
-
-.input {
-  #user_password {
-    width: 15rem;
-    margin-left: 9.5rem;
-  }
-
-  #user_password_confirmation {
-    width: 15rem;
-    margin-left: 2rem;
-  }
-
-  #user_current_password {
-    width: 15rem;
-    margin-left: 5rem;
-  }
 }
 
 .back {
   background-color: #1c3e4a;
   color: white;
   font-size: 1rem;
-}
-
-.edit {
-  height: auto;
-
-  .title-edit {
-    color: #529ff7;
-    font-weight: 900;
-    font-size: 2rem;
-  }
-
-  label {
-    font-size: 1.3rem;
-  }
-
-  input {
-    font-size: 1.1rem;
-  }
-
-  small {
-    font-size: 1rem;
-  }
-
-  .update {
-    background-color: #529ff7;
-    color: white;
-    font-weight: bolder;
-    font-size: 1.3rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 1.3rem;
-  }
-
-  .label-pics {
-    font-weight: bolder;
-    color: #529ff7;
-  }
 }
 
 .alert,
@@ -382,20 +391,7 @@ footer {
   margin-left: 20rem;
 }
 
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: blue;
-}
-
-footer small {
-  float: left;
-}
-
 footer ul {
-  // float: right;
   list-style: none;
   align-items: center;
 }

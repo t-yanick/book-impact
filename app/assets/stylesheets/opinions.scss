@@ -25,12 +25,18 @@
         }
       }
 
-      .trix-editor {
+      trix-editor {
         height: 50rem;
         font-size: 1.7rem;
       }
     }
   }
+}
+
+.comment {
+  font-size: 1rem;
+  background-color: #529ff7;
+  color: white;
 }
 
 .cont-opinions {
@@ -43,7 +49,6 @@
     .opinions-content {
       strong {
         font-size: 1rem;
-        // color: #b5b9b5
       }
 
       small {
@@ -79,7 +84,7 @@
         }
 
         span {
-          font-size: 0.75	rem;
+          font-size: 0.75rem;
         }
       }
 
@@ -100,12 +105,6 @@
       }
     }
   }
-}
-
-.comment {
-  font-size: 1rem;
-  background-color: #529ff7;
-  color: white;
 }
 
 .whotofollow {
@@ -168,16 +167,11 @@
         }
       }
 
-      .trix-editor {
+      trix-editor {
         height: 10rem;
         font-size: 1.7rem;
       }
     }
-  }
-
-  a {
-    font-size: 1rem;
-    font-weight: bolder;
   }
 }
 
