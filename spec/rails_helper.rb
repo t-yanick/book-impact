@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # rubocop: disable Style/IfUnlessModifier
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'

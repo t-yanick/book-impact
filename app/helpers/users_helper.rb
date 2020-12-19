@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module UsersHelper
   def follow_unfollow(user)
     links = link_to 'Unfollow', following_path, method: :delete, class: 'textdec-none form-btn unfollow-btn align-self-center'
@@ -52,7 +50,7 @@ module UsersHelper
   end
 
   def comment_settings(opinion)
-    if user_signed_in? && current_user.id == opinion.user_id
+    return unless user_signed_in? && current_user.id == opinion.user_id
       content_tag :div, class: 'd-flex justify-content-between'
       "#{link_to edit_opinion_path(id: opinion.id), class: 'text-dark mx-2 icon-comment' do
            fa_icon 'edit'
@@ -60,6 +58,5 @@ module UsersHelper
       "#{link_to opinion, method: :delete, data: { confirm: 'Are you sure you want to delete this comment?' }, class: 'text-dark mx-2 icon-comment' do
            fa_icon 'trash-alt'
          end}".html_safe
-    end
   end
 end
