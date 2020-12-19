@@ -26,19 +26,13 @@
   <div class='home-page text-center'>
     <%= link_to users_path, class: 'd-flex justify-content-start align-items-center h-items' do%>
       <span><i class="fas fa-at text-light"></i></span>
-      <h3 class='m-0 text-light'> CONECT</h3>
+      <h3 class='m-0 text-light'> CONNECT</h3>
     <% end%>
   </div>
   <div class='home-page text-center'>
     <%= link_to user_path(current_user.id), class: 'd-flex justify-content-start align-items-center h-items' do%>
       <span><i class="fas fa-user-alt text-light"></i></span>
       <h3 class='m-0 text-light'> PROFILE</h3>
-    <% end%>
-  </div>
-  <div class='home-page text-center'>
-    <%= link_to user_path(current_user.id), class: 'd-flex justify-content-start align-items-center h-items' do%>
-      <span><i class="fas fa-user-alt text-light"></i></span>
-      <h3 class='m-0 text-light'> STATISTICS</h3>
     <% end%>
   </div>
 </section>

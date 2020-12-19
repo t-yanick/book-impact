@@ -12,18 +12,13 @@
     <p class='follow-button'><%= follow_unfollow(@user)%></p>
 
     <div class='d-flex row justify-content-center user-follows mb-5 mx-0'>
-      
-      <div class='mr-5'>
-        <h3><%= @user.opinions.count.to_s%></h3>
-        <h4>Reviews</h4>
-      </div>
 
-      <div>
+      <div class='mr-6'>
         <h3><%= @user.followers.count.to_s %></h3>
         <h4>Followers</h4>
       </div>
 
-      <div class='ml-5'>
+      <div class='mr-6'>
         <h3><%= @user.followeds.count.to_s %></h3>
         <h4>Following</h4>
       </div>
@@ -45,7 +40,7 @@
           <div class='col-4 mr-3'>
             <%= user_avatar(person) %>
           </div>
-          <div class='col-7 d-flex justify-content-center align-items-center'>
+          <div class='col-12 d-flex row justify-content-center align-items-center'>
             <%= link_to person.name, user_path(person.id)  %>
           </div>
         </div>

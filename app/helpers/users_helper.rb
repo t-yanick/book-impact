@@ -29,7 +29,7 @@ module UsersHelper
     if resource.photo.attached?
       image_tag resource.photo.variant(resize: '90x90!'), class: 'rounded-circle'
     else
-      image_tag('avatar.png', class: 'rounded-circle', height: 90, width: 90)
+      image_tag('yan-profile.jpg', class: 'rounded-circle', height: 90, width: 90)
     end
   end
 
@@ -37,7 +37,7 @@ module UsersHelper
     if resource.cover_image.attached?
       image_tag resource.cover_image.variant(resize: '90x90!'), class: 'rounded-circle'
     else
-      image_tag('avatar.png', height: 90, width: 90)
+      image_tag('yan-profile.jpg', height: 90, width: 90)
     end
   end
 
@@ -45,7 +45,7 @@ module UsersHelper
     if current_user.photo.attached?
       image_tag current_user.photo.variant(resize: '90x90!'), class: 'rounded-circle'
     else
-      image_tag('avatar.png', class: 'rounded-circle', height: 90, width: 90)
+      image_tag('yan-profile.jpg', class: 'rounded-circle', height: 90, width: 90)
     end
   end
 
