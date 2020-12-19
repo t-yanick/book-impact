@@ -21,6 +21,10 @@ In this line, book review social media website is a platform for users to post r
 - Prepare data architecture documentation;
 - Work with deployment to Heroku.<br>
 
+## 🎥 Video Presentation
+[Link Presentation Video](https://www.loom.com/share/8137eb3820f64e9e84613e3d964c878b)
+
+
 ## Live Demo
 
 [Project live website](https://evening-mountain-82652.herokuapp.com/)
