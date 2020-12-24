@@ -1,4 +1,4 @@
-<div class='container shadow-lg p-3 mb-4 bg-white rounded'>
+<div class='container right-side shadow-lg p-3 mb-4 bg-white rounded'>
   <div class="col-12 align-content-center pt-4">
     <div style="text-align: center">
       <%= user_avatar(@user) %>
@@ -11,21 +11,21 @@
     <p class="card-text"><small class="text-muted"><%= "@#{@user.username}" %></small></p>
     <p class='follow-button'><%= follow_unfollow(@user)%></p>
 
-    <div class='mr-6 justify-content-center user-follows mb-5 mx-0'>
-        <h3><%= @user.opinions.count.to_s%></h3>
-        <h4>Reviews</h4>
-      </div>
-
     <div class='d-flex row justify-content-center user-follows mb-5 mx-0'>
 
       <div class='mr-6'>
-        <h3><%= @user.followers.count.to_s %></h3>
-        <h4>Followers</h4>
+        <h5><%= @user.opinions.count.to_s%></h5>
+        <h6>Reviews &nbsp;</h6>
       </div>
 
       <div class='mr-6'>
-        <h3><%= @user.followeds.count.to_s %></h3>
-        <h4>Following</h4>
+        <h5><%= @user.followers.count.to_s %></h5>
+        <h6>Followers &nbsp;</h6>
+      </div>
+
+      <div class='mr-6'>
+        <h5><%= @user.followeds.count.to_s %></h5>
+        <h6>Following</h6>
       </div>
       
     </div>

@@ -21,6 +21,10 @@
   }
 }
 
+.right-side {
+  height: 100%
+}
+
 .user-data {
   height: 65rem;
   overflow-y: auto;
@@ -41,13 +45,14 @@
 
   .user-follows {
     width: auto;
+    height: 1rem;
 
-    h3,
-    h4 {
+    h5,
+    h6 {
       color: #529ff7;
       font-weight: bold;
-      text-align: center;
-      font-size: 1.4rem;
+      text-align: center; 
+      font-size: 0.75rem;
     }
   }
 
