@@ -11,6 +11,11 @@
     <p class="card-text"><small class="text-muted"><%= "@#{@user.username}" %></small></p>
     <p class='follow-button'><%= follow_unfollow(@user)%></p>
 
+    <div class='mr-6 justify-content-center user-follows mb-5 mx-0'>
+        <h3><%= @user.opinions.count.to_s%></h3>
+        <h4>Reviews</h4>
+      </div>
+
     <div class='d-flex row justify-content-center user-follows mb-5 mx-0'>
 
       <div class='mr-6'>
