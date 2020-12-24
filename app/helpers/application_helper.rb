@@ -14,7 +14,7 @@ module ApplicationHelper
        "#{link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn text-light m-2 logs'}".html_safe
     else
       "#{link_to 'Sign In', new_user_session_path, class: 'btn text-light m-2 logs'}" \
-       "#{link_to 'Sing Up', new_user_registration_path, class: 'btn text-light m-2 logs'}".html_safe
+       "#{link_to 'Sign Up', new_user_registration_path, class: 'btn text-light m-2 logs'}".html_safe
     end
   end
 
