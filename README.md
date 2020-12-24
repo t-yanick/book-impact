@@ -13,8 +13,6 @@ In this line, book review social media website is a platform for users to post r
 
 ## Screenshot
 ![screenshot1](app/assets/images/signin.png)
-![screenshot1](app/assets/images/user.png)
-![screenshot1](app/assets/images/screenshot.png)
 ## Usage
 
 - This project intends to practice my skills building a full working MVP;
@@ -109,10 +107,11 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+- Much thanks and appreciation to `Behance Design Author`
 - Hat tip to anyone whose code was used
-- You can find the original project here: [link](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details)
+- You can find the original project here: [Behance Design](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details)
 - [Microverse](https://www.microverse.org/)
-- etc
+- All the TSEs who have reviewed my projects.
 
 ## 📝 License
 
