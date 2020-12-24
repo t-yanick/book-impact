@@ -39,9 +39,7 @@ class User < ApplicationRecord
     followds.destroy(user)
   end
 
-  private
-
-    def counting(user_info)
-      user_info.count.to_s
-    end
+  def counting(user_info)
+    user_info.count.to_s
+  end
 end
