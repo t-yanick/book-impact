@@ -1,14 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Feedback:</strong>
-  <%= @opinion.feedback %>
-</p>
+<div class='col-7 container mt-5 shadow-lg p-3 mb-5 bg-white rounded editing-p'>
+  <p class='text-center'>
+    <strong class='text-center'>Review</strong>
+  </p>
+  <%= @opinion.body %>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @opinion.user_id %>
-</p>
+<div class='text-center'>  
+  <strong>Review done by</strong>
+  <%= current_user.name %>
+</div>
+ 
+<div class='text-center'> 
+  <%= link_to 'Edit', edit_opinion_path(@opinion) %> |
+  <%= link_to 'Back', opinions_path %>
+</div>
 
-<%= link_to 'Edit', edit_opinion_path(@opinion) %> |
-<%= link_to 'Back', opinions_path %>
