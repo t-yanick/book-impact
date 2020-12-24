@@ -5,7 +5,7 @@ class OpinionsController < ApplicationController
   # GET /opinions
   # GET /opinions.json
   def index
-    @opinions = current_user.followeds_opinions
+    @opinions = current_user.followeds_opinions.includes(:user)
     @opinion = Opinion.new
     @users_first_three = current_user.who_follow.last(3)
   end

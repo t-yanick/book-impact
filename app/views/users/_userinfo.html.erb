@@ -14,17 +14,17 @@
     <div class='d-flex row justify-content-center user-follows mb-5 mx-0'>
 
       <div class='mr-6'>
-        <h5><%= @user.opinions.count.to_s%></h5>
+        <h5><%= @user.counting(@user.opinions)%></h5>
         <h6>Reviews &nbsp;</h6>
       </div>
 
       <div class='mr-6'>
-        <h5><%= @user.followers.count.to_s %></h5>
+        <h5><%= @user.counting(@user.followers) %></h5>
         <h6>Followers &nbsp;</h6>
       </div>
 
       <div class='mr-6'>
-        <h5><%= @user.followeds.count.to_s %></h5>
+        <h5><%= @user.counting(@user.followeds) %></h5>
         <h6>Following</h6>
       </div>
       

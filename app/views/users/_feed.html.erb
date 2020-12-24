@@ -1,4 +1,4 @@
-<% @user.opinions.order("created_at DESC").each do |opinion| %>
+<% @user.ordered_opinions.each do |opinion| %>
     <div class="container border py-4 my-2 mx-auto d-flex col-8 opinions">
       
       <div class="col-4 userimg d-flex justify-content-center align-items-center">

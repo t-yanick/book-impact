@@ -16,7 +16,7 @@ class FollowingsController < ApplicationController
     @user = User.find(params[:id])
     if @user.present?
       current_user.unfollow(@user)
-      flash[:notice] = "Unfolow #{@user.username}"
+      flash[:notice] = "Unfollow #{@user.username}"
     else
       flash[:notice] = 'Something went wrong, try again'
     end

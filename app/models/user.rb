@@ -9,6 +9,7 @@ class User < ApplicationRecord
                        length: { in: 5..20 },
                        format: { without: /\s/, message: 'no spaces allowed' }
   has_many :opinions, dependent: :destroy
+  has_many :ordered_opinions, -> { order(created_at: :desc) }, class_name: 'Opinion'
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :followers, class_name: 'Following', foreign_key: 'follower_id', dependent: :destroy
@@ -36,5 +37,9 @@ class User < ApplicationRecord
 
   def unfollow(user)
     followds.destroy(user)
+  end
+
+  def counting(user_info)
+    user_info.count.to_s
   end
 end
