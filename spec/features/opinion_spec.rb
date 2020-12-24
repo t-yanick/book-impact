@@ -8,6 +8,10 @@ RSpec.describe 'Test to verify if the users opinions' do
     Opinion.create(user_id: 1, body: 'Ngwa Opinion')
     Opinion.create(user_id: 2, body: 'Tebong Opinion')
     Opinion.create(user_id: 3, body: 'Teke Opinion')
+    @following1 = Following.new
+    @following2 = Following.new
+    @following1.confirm_following(@user2, @user1)
+    @following2.confirm_following(@user3, @user1)
   end
   feature 'User can see other users opinions' do
     scenario 'sign in and go to opinion index' do

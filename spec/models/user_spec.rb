@@ -14,8 +14,8 @@ RSpec.describe User, type: :model do
   describe 'validations' do
     subject { User.create(name: 'tazoh yan', username: 'yanick', email: 'ynick@test.com', password: '123456', id: 1) }
 
-    it { should validate_presence_of(:name) }
+    it { should validate_presence_of(:username) }
     it { should validate_presence_of(:email) }
-    it { should validate_uniqueness_of(:username) }
+    it { should validate_uniqueness_of(:username).case_insensitive }
   end
 end
