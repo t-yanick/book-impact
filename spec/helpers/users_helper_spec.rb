@@ -21,16 +21,5 @@ RSpec.describe UsersHelper, type: :helper do
       return links if @user1.followds.include?(@user2)
       'Unfollow' unless @user1.followds.include?(@user3) || @user1 == @user3
     end
-
-    # it "displays unfollow link" do
-    #   return cntnt unless @user1.followds.include?(@user2) || @user1 == @user2
-    # end
   end
-
-  # describe "avatar image" do
-  #   it "displays avatar image" do
-  #     @user1.photo.attached?
-  #     expect(image_tag[:@user1]).to eq(@user1.photo.variant, resize: '90x90!')
-  #   end
-  # end
 end
