@@ -20,7 +20,7 @@ In this line, book review social media website is a platform for users to post r
 - Work with deployment to Heroku.<br>
 
 ## 🎥 Video Presentation
-[Link Presentation Video](https://www.loom.com/share/8137eb3820f64e9e84613e3d964c878b)
+[Link Presentation Video](https://www.loom.com/share/54e9b2a65d494b72a9cc15f0546cbf37)
 
 
 ## Live Demo
