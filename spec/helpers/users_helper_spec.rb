@@ -16,9 +16,10 @@ RSpec.describe UsersHelper, type: :helper do
     @user2 = User.create(name: 'tebong', username: '@tebong', email: 'tebong@test.com', password: '123456', id: 2)
     @user3 = User.create(name: 'teke', username: '@teke', email: 'teke@test.com', password: '123456', id: 3)
   end
-  describe "follow and unfollow" do
-    it "displays follow link" do
+  describe 'follow and unfollow' do
+    it 'displays follow link' do
       return links if @user1.followds.include?(@user2)
+
       'Unfollow' unless @user1.followds.include?(@user3) || @user1 == @user3
     end
   end
