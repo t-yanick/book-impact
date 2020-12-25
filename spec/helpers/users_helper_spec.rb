@@ -11,5 +11,26 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe UsersHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before :each do
+    @user1 = User.create(name: 'ngwa', username: '@ngwa', email: 'ngwa@test.com', password: '123456', id: 1)
+    @user2 = User.create(name: 'tebong', username: '@tebong', email: 'tebong@test.com', password: '123456', id: 2)
+    @user3 = User.create(name: 'teke', username: '@teke', email: 'teke@test.com', password: '123456', id: 3)
+  end
+  describe "follow and unfollow" do
+    it "displays follow link" do
+      return links if @user1.followds.include?(@user2)
+      'Unfollow' unless @user1.followds.include?(@user3) || @user1 == @user3
+    end
+
+    # it "displays unfollow link" do
+    #   return cntnt unless @user1.followds.include?(@user2) || @user1 == @user2
+    # end
+  end
+
+  # describe "avatar image" do
+  #   it "displays avatar image" do
+  #     @user1.photo.attached?
+  #     expect(image_tag[:@user1]).to eq(@user1.photo.variant, resize: '90x90!')
+  #   end
+  # end
 end
