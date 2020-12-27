@@ -32,12 +32,12 @@ gem 'bulma-rails', '~> 0.9.0'
 gem 'devise'
 gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
 gem 'font-awesome-rails'
-gem 'gravatar_image_tag', '~> 1.2'
 gem 'hirb'
 gem 'simple_form'
 gem 'trix'
 
 gem 'image_processing', '~> 1.2'
+gem 'rmagick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

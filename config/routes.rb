@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'opinions#index'
 
-  devise_for :users, controllers: { registrations: 'users/registrations' }
+  devise_for :users
 
   resources :users, only: %i[index show]
   resources :followings, only: %(destroy)
