@@ -1,0 +1,57 @@
+<div class='container right-side shadow-lg p-3 mb-4 bg-white rounded'>
+  <div class="col-12 align-content-center pt-4">
+    <div style="text-align: center">
+      <%= user_avatar(@user) %>
+    </div>
+  </div>
+
+  <div class=" justify-content-center user-data px-0" style=" text-align: center">
+    
+    <h5 class="card-title u-title mt-3"><%= @user.name %></h5>
+    <p class="card-text"><small class="text-muted"><%= "@#{@user.username}" %></small></p>
+    <p class='follow-button'><%= follow_unfollow(@user)%></p>
+
+    <div class='d-flex row justify-content-center user-follows mb-5 mx-0'>
+
+      <div class='mr-6'>
+        <h5><%= @user.counting(@user.opinions)%></h5>
+        <h6>Reviews &nbsp;</h6>
+      </div>
+
+      <div class='mr-6'>
+        <h5><%= @user.counting(@user.followers) %></h5>
+        <h6>Followers &nbsp;</h6>
+      </div>
+
+      <div class='mr-6'>
+        <h5><%= @user.counting(@user.followeds) %></h5>
+        <h6>Following</h6>
+      </div>
+      
+    </div>
+
+    
+    <div class="media-body">
+      <div class="row media-2">
+       
+      </div>
+      <hr/>
+    </div>
+    
+    <h4>Followed by @<%=current_user.username%></h4> 
+    <% current_user.followds.each do |person| %>
+      <div class="col-11 users-followeds">
+        <div class='row d-flex'>
+          <div class='col-4 mr-3'>
+            <%= user_avatar(person) %>
+          </div>
+          <div class='col-12 d-flex row justify-content-center align-items-center'>
+            <%= link_to person.name, user_path(person.id)  %>
+          </div>
+        </div>
+      </div>
+      <hr>
+    <% end %>
+    
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<div class='col-7 container mt-5 shadow-lg p-3 mb-5 bg-white rounded editing-p'>
+  <p class='text-center'>
+    <strong class='text-center'>Review</strong>
+  </p>
+  <%= @opinion.body %>
+</div>
+
+<div class='text-center'>  
+  <strong>Review done by</strong>
+  <%= current_user.name %>
+</div>
+ 
+<div class='text-center'> 
+  <%= link_to 'Edit', edit_opinion_path(@opinion) %> |
+  <%= link_to 'Back', opinions_path %>
+</div>
+

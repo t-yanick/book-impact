@@ -1,0 +1,36 @@
+<div class="container d-flex justify-content-center border mt-2 mb-4 mx-0 rounded row align-middle shadow opinions-form">
+  <%= render 'form' %>
+</div>
+<div class='cont-opinions'>
+  <% @opinions.each do |opinion| %>
+    <div class="container border py-4 my-5 mx-auto d-flex col-8 opinions">
+      
+      <div class="col-4 userimg d-flex justify-content-center align-items-center">
+        <%= user_avatar(opinion.user) %>
+      </div>
+
+      <div class="col-8 opinions-content">
+        <div class='d-flex justify-content-between align-items-center'>
+          <div>
+            <strong><%= opinion.user.name %></strong><br/>
+            <small>@<%= opinion.user.username %></small><br/>
+          </div>
+          <div class='like'>
+            <%= like_or_dislike_btn(opinion) %>
+          </div>
+        </div>
+        <%= opinion.body %>
+
+        <%= render partial: 'comments/comment', collection: opinion.comments %>
+        <%= form_for(opinion.comments.new, url: opinion_comments_path(opinion)) do |form| %>
+          <%= form.text_field :content, id: :comment_content, class: 'form-control', placeholder: 'Add new Comment' %>
+          <%= form.submit 'Comment', class: 'btn mt-2 comment' %>
+        <% end %>
+        <div class='d-flex justify-content-end'>
+          <%= comment_settings(opinion) %>
+        </div>
+
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,220 @@
+// Place all the styles related to the Opinions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.opinions-form {
+  .form-p {
+    width: 100%;
+
+    .trix {
+      .title-fp {
+        font-size: 1.7rem;
+        font-weight: bolder;
+      }
+
+      .text-area {
+        #trix-toolbar-2 {
+          font-size: 1.2rem;
+
+          .trix-button-row {
+            .trix-button-group:nth-child(2) {
+              display: none;
+              background-color: white;
+            }
+          }
+        }
+      }
+
+      trix-editor {
+        height: 50rem;
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+.comment {
+  font-size: 1rem;
+  background-color: #529ff7;
+  color: white;
+}
+
+.cont-opinions {
+  height: 60rem;
+  overflow-y: auto;
+
+  .opinions {
+    height: auto;
+
+    .opinions-content {
+      strong {
+        font-size: 1rem;
+      }
+
+      small {
+        font-size: 0.75rem;
+      }
+
+      .like {
+        font-size: 2rem;
+
+        .like-button {
+          color: #529ff7;
+        }
+      }
+
+      h5 {
+        text-align: end;
+        font-size: 2.2rem;
+        color: #529ff7;
+        font-weight: bolder;
+      }
+
+      .trix-content {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .post-comments {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+          font-size: 1rem;
+        }
+
+        span {
+          font-size: 0.75rem;
+        }
+      }
+
+      .form-control {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+
+      .comment {
+        font-size: 1rem;
+        background-color: #529ff7;
+        color: white;
+      }
+
+      .icon-comment {
+        font-size: 1.5rem;
+        margin-top: 1.3rem;
+      }
+    }
+  }
+}
+
+.whotofollow {
+  .w-title {
+    border-bottom: rgba(190, 186, 186, 0.863) solid 1px;
+    text-align: center;
+    padding: 1rem 0;
+
+    h3 {
+      font-size: 1rem;
+    }
+  }
+
+  .users-to-f {
+    padding-top: 1rem;
+    margin-left: -1rem;
+
+    a {
+      font-size: 0.85rem;
+      color: #1c3e4a;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.editing-p {
+  height: 25rem;
+
+  h1 {
+    text-align: center;
+  }
+
+  .form-p {
+    .trix {
+      .title-fp {
+        h3 {
+          font-size: 1.3rem;
+          font-weight: bolder;
+        }
+      }
+
+      select {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+
+      .text-area {
+        #trix-toolbar-2 {
+          font-size: 1rem;
+
+          .trix-button-row {
+            .trix-button-group:nth-child(2) {
+              display: none;
+              background-color: white;
+            }
+          }
+        }
+      }
+
+      trix-editor {
+        height: 10rem;
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+.new-opinion {
+  h1 {
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+  }
+
+  .new-form-p {
+    .form-p {
+      width: 100%;
+
+      .trix {
+        .title-fp {
+          font-size: 1.3rem;
+          font-weight: bolder;
+        }
+
+        select {
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+        }
+
+        .text-area {
+          #trix-toolbar-1 {
+            font-size: 1.2rem;
+
+            .trix-button-row {
+              .trix-button-group:nth-child(2) {
+                display: none;
+                background-color: white;
+              }
+            }
+          }
+        }
+
+        trix-editor {
+          height: 10rem;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}

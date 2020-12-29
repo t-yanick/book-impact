@@ -1,0 +1,47 @@
+<section class = 'container-fluid p-0 m-0'>
+  <div class = 'row m-0'>
+    <div class = 'col-2 user-profile p-0 m-0'>
+      <%= render 'user-profile'%>
+    </div>
+    <div class = 'col-10 m-0 p-0'>
+      <%= flash_message %>
+      <%= render 'opinions/navbar' %>
+      <div class = 'row m-0'>
+        <div class = 'col-8 mt-5'>
+          <%= render 'feed' %>
+        </div>
+        <div class="col-3 shadow p-3 mb-5 bg-white rounded mt-5 trending">
+        <div class='whotofollow'>
+          <div class='w-title'>
+            <h3>WHO TO FOLLOW?</h3>
+          </div>
+          <div>
+            <% @users_first_three.each do |p| %>
+              <div class="col-12 users-to-f text-start">
+                <%= user_avatar(p) %>
+                <%=link_to p.name, user_path(id: p.id) %>
+                <hr>
+              </div>
+            <% end %>
+          </div>
+          <div class="text-muted pt-2 ">
+              <h4 class="text-center">Trending</h4>
+              <hr>
+              <div class="container text-center">
+                <h6>#The Lying Life of Adults</h6>
+                <hr>
+                <h6>#The Glass Hotel</h6>
+                <hr>
+                <h6>#Artificial Intelligence: The Insights You Need from Harvard Business Review</h6>
+                <hr>
+                <h6>#Clean Code</h6>
+                <hr>
+                <h6>#The Pragmatic Programmer</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

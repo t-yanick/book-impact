@@ -1,0 +1,30 @@
+<section class='container-fluid p-0'>
+  <div class='row m-0'>
+    <div class='col-2 user-profile bg-secondary p-0 m-0'>
+      <%= render 'opinions/user-profile' %>
+    </div>
+    <div class='col-10 p-0 m-0'>
+      <%= flash_message %>
+      <%= render 'opinions/navbar' %>
+      <div class='row m-0 user-info'>
+        <div class="col-9 user-interact">
+          <div>
+          <%= user_cover %>
+          </div>
+          <div>
+            <%= render 'user_tab_navbar'%>
+          </div>
+          <div class='user-form shadow-lg p-3 mb-5 bg-white rounded mt-2'>
+            <%= render 'form' %>
+          </div>
+          <div class='feed-c'>
+            <%= render 'feed' %>
+          </div>
+        </div>
+        <div class="col-3 user-interact">
+          <%= render 'userinfo'%>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

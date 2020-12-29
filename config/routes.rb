@@ -1,3 +1,14 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root 'opinions#index'
+
+  devise_for :users
+
+  resources :users, only: %i[index show]
+  resources :followings, only: %(destroy)
+
+  get 'following/:id', to: 'followings#create', as: 'follow'
+  resources :opinions do
+    resources :comments, only: %i[create]
+    resources :likes, only: %i[create destroy]
+  end
 end
